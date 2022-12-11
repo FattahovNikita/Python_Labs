@@ -38,9 +38,9 @@ class Employee(Person):
 
     def save(self, json_filepath: str):
         to_json = {
-            "name": self.fullname,
+            "name": self.name,
             "age": self.age,
-            "profession": self.profession
+            "profession": self.profession,
             "salary": self.salary
         }
         with open(json_filepath, 'w') as file:
@@ -49,7 +49,7 @@ class Employee(Person):
     def load(self, json_filepath: str):
         with open(json_filepath) as file:
             obj = json.load(file)
-            self.fullname = obj["fullname"]
+            self.name = obj["name"]
             self.age = obj["age"]
             self.profession = obj["profession"]
             self.salary = obj["salary"]
