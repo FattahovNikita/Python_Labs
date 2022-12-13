@@ -6,6 +6,17 @@ class Person:
         self.name = name
         self.age = age
 
+    @property
+    def Name(self):
+        return self.name
+
+    @property
+    def Age(self):
+        return self.age
+
+    def __str__(self):
+        return f"Person: (name: {self.name}, age: {self.age})"
+
     def show_info(self):
         print("Name:", self.name)
         print("Age:", self.age)
@@ -30,11 +41,21 @@ class Employee(Person):
         super().__init__(name, age)
         self.profession = profession
         self.salary = salary
+    @property
+    def Profession(self):
+        return self.profession
+
+    @property
+    def Salary(self):
+        return self.salary
 
     def show_info(self):
         super().show_info()
         print("Profession:", self.profession)
         print("Salary:", self.salary)
+
+    def __str__(self):
+        return f"Employee: (name: {self.name}, age: {self.age}, profession: {self.profession}, salary: {self.salary})"
 
     def save(self, json_filepath: str):
         to_json = {
