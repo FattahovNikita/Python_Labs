@@ -7,5 +7,5 @@ print("Employee information saved\n")
 
 Test = Employee("Test", 0, "Test", 0)
 Test.load("Human_data.json")
-print("Emloyee information loaded\n")
-Test.show_info()
+print("Employee information loaded\n")
+print(Test.__repr__())

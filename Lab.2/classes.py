@@ -15,11 +15,10 @@ class Person:
         return self.age
 
     def __str__(self):
-        return f"Person: (name: {self.name}, age: {self.age})"
+        return f"Person name is  {self.name}, age is {self.age}"
+    def __repr__(self):
+        return f"Person(name={self.name}, age={self.age})"
 
-    def show_info(self):
-        print("Name:", self.name)
-        print("Age:", self.age)
 
     def save(self, json_filepath: str):
         to_json = {
@@ -49,13 +48,11 @@ class Employee(Person):
     def Salary(self):
         return self.salary
 
-    def show_info(self):
-        super().show_info()
-        print("Profession:", self.profession)
-        print("Salary:", self.salary)
-
     def __str__(self):
-        return f"Employee: (name: {self.name}, age: {self.age}, profession: {self.profession}, salary: {self.salary})"
+        return f"Employee name is {self.name}, age is {self.age}, profession is {self.profession}, salary is {self.salary}"
+
+    def __repr__(self):
+        return f"Employee(name='{self.name}', age={self.age}, profession='{self.profession}', salary={self.salary})"
 
     def save(self, json_filepath: str):
         to_json = {
@@ -74,4 +71,3 @@ class Employee(Person):
             self.age = obj["age"]
             self.profession = obj["profession"]
             self.salary = obj["salary"]
-
