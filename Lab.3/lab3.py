@@ -12,3 +12,10 @@ print(Sum[999999] == X)
 Average[X] = X / 2
 print("Average 1-999999: ")
 print(Average[1000] == X)
+
+# Медиана
+for i in range(100):
+    arr[i] = randint(1,100)
+arr.sort()
+median[X] = arr[X // 2]
+print(median[100] == Median)
