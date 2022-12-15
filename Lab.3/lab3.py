@@ -19,3 +19,9 @@ for i in range(100):
 arr.sort()
 median[X] = arr[X // 2]
 print(median[100] == Median)
+
+# Произведение
+mult[1] = arr[0]
+mult[X] = arr[X - 1] * mult[X - 1]
+print(mult[100] == Mult)
+
