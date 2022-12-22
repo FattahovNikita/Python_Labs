@@ -21,3 +21,10 @@ for item in all_cinemas_names:
 print(cinemas)
 print(list(map(lambda x: "Cinema " + x,cinemas)))
 print(reduce(lambda x, y: x +" " + y, cinemas))
+
+
+iris = datasets.load_iris()
+names_list = list(iris.target_names)
+print(names_list)
+print(list(map(lambda x: "Name " + x , names_list)))
+print(reduce(lambda x, y: x +" " + y, names_list))
