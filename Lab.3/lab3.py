@@ -11,7 +11,7 @@ print(Sum[999999] == X)
 # Среднее арифметическое
 Average[X] = X / 2
 print("Average 1-999999: ")
-print(Average[1000] == X)
+print(Average[999999] == X)
 
 # Медиана
 for i in range(100):
@@ -21,7 +21,7 @@ median[X] = arr[X // 2]
 print(median[100] == Median)
 
 # Произведение
-mult[1] = arr[0]
-mult[X] = arr[X - 1] * mult[X - 1]
+mult[X] = X * mult[X - 1]
+mult[1] = 1
 print(mult[100] == Mult)
 

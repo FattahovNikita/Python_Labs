@@ -5,7 +5,6 @@ from functools import reduce
 
 
 num_list = [1, 2, 3, 4, 5]
-print(num_list)
 print(list(map(lambda x: x * 2, num_list)))
 print(reduce(lambda x, y: x + y, num_list))
 
@@ -18,13 +17,12 @@ cinemas = []
 for item in all_cinemas_names:
     item_name = item.text
     cinemas.append(item_name)
-print(cinemas)
-print(list(map(lambda x: "Cinema " + x,cinemas)))
+print(list(map(lambda x: "Кинотеатр " + x,cinemas)))
 print(reduce(lambda x, y: x +" " + y, cinemas))
 
 
 iris = datasets.load_iris()
 names_list = list(iris.target_names)
-print(names_list)
+
 print(list(map(lambda x: "Name " + x , names_list)))
 print(reduce(lambda x, y: x +" " + y, names_list))
